@@ -4,6 +4,8 @@ declare module './Ice' {
   namespace Ice {
     export class Communicator {
       destroy(): Ice.Promise<void>;
+      shutdown(): void;
+      waitForShutdown(): Ice.Promise<void>;
 
       stringToProxy(str: string): Ice.ObjectPrx;
       propertyToProxy(property: string): Ice.ObjectPrx | null;
