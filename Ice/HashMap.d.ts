@@ -7,6 +7,7 @@ declare module './Ice' {
 
       get(key: K): V | undefined;
       set(key: K, value: V): void;
+      has(key: K): boolean;
     }
   }
 }

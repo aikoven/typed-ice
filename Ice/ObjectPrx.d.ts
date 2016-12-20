@@ -20,7 +20,8 @@ declare module './Ice' {
       ice_getConnection(): Ice.Promise<Ice.Connection>;
       ice_getCommunicator(): Ice.Communicator;
       ice_getIdentity(): Ice.Identity;
-      ice_context(context: Ice.HashMap<string, string>): this;
+      ice_context(context: Ice.Context): this;
+      ice_getContext(): Ice.Context;
     }
     
     export const ObjectPrx: ObjectPrxStatic<ObjectPrx>;
