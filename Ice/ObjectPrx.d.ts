@@ -6,6 +6,8 @@ declare module './Ice' {
     export interface ObjectPrxStatic<T extends ObjectPrx> {
       new(): T;
 
+      ice_staticId(): string;
+
       checkedCast(proxy: ObjectPrx, facet?: string,
                   ctx?: Ice.HashMap<string, string>): Ice.Promise<T>;
 
