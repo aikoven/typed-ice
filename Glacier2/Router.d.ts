@@ -7,6 +7,7 @@ declare module './Glacier2' {
       createSession(userId: string, password: string,
                     context?: Ice.Context):
         Ice.Promise<Glacier2.SessionPrx>;
+      destroySession(): Ice.Promise<void>;
       getACMTimeout(): Ice.Promise<number>;
       getCategoryForClient(): Ice.Promise<string>;
     }
