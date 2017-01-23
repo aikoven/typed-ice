@@ -10,8 +10,15 @@ declare module './Ice' {
 
       checkedCast(proxy: ObjectPrx, facet?: string,
                   ctx?: Ice.HashMap<string, string>): Ice.Promise<T>;
+      checkedCast(proxy: null | undefined, facet?: string,
+                  ctx?: Ice.HashMap<string, string>): Ice.Promise<null>;
+      checkedCast(proxy: ObjectPrx | null | undefined, facet?: string,
+                  ctx?: Ice.HashMap<string, string>): Ice.Promise<T | null>;
 
       uncheckedCast(proxy: ObjectPrx, facet?: string): T;
+      uncheckedCast(proxy: null | undefined, facet?: string): null;
+      uncheckedCast(proxy: ObjectPrx | null | undefined,
+                    facet?: string): T | null;
     }
     
     export interface ObjectPrx {
