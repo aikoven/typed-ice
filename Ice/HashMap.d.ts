@@ -7,6 +7,7 @@ declare module './Ice' {
       constructor(from: HashMap<K, V>);
 
       forEach(fn: (key: K, value: V) => void, obj?: any): void;
+      keys(): K[];
 
       get(key: K): V | undefined;
       set(key: K, value: V): void;
