@@ -1,4 +1,5 @@
 import './Ice';
+import './PropertiesAdmin';
 
 declare module './Ice' {
   namespace Ice {
