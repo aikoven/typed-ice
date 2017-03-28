@@ -12,6 +12,7 @@ declare module './Ice' {
       setProperty(key: string, value: string): void;
       parse(data: string): void;
       parseCommandLineOptions(prefix: string, options: string[]): string[];
+      parseIceCommandLineOptions(options: string[]): string[];
     }
   }
 }
