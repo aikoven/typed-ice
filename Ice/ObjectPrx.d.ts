@@ -1,4 +1,4 @@
-import {Ice} from './Ice';
+import './Ice';
 import './Connection';
 
 declare module './Ice' {

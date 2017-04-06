@@ -1,4 +1,4 @@
-import {Ice} from './Ice';
+import './Ice';
 import './EnumBase';
 
 declare module './Ice' {
@@ -29,7 +29,8 @@ declare module './Ice' {
       setAdapter(adapter: Ice.ObjectAdapter): void;
 
       setCallback(callback: ConnectionCallback): void;
-      setACM(timeout?: number, close?: ACMClose, heartbeat?: ACMHeartbeat): void;
+      setACM(timeout?: number, close?: ACMClose,
+             heartbeat?: ACMHeartbeat): void;
       
       isActiveOrHolding(): boolean;
       waitUntilFinished(): Ice.Promise<void>;

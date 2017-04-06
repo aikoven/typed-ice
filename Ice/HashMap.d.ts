@@ -1,4 +1,4 @@
-import {Ice} from './Ice';
+import './Ice';
 
 declare module './Ice' {
   namespace Ice {
