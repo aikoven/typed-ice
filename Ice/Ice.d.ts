@@ -7,6 +7,7 @@ import './Communicator';
 import './HashMap';
 import './Object';
 import './Long';
+import './EndpointTypes';
 
 import './ObjectPrx';
 
