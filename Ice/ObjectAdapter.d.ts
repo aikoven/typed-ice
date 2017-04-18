@@ -20,6 +20,7 @@ declare module './Ice' {
       createDirectProxy(id: Ice.Identity): Ice.ObjectPrx;
       createIndirectProxy(id: Ice.Identity): Ice.ObjectPrx;
 
+      isDeactivated(): boolean;
       destroy(): Ice.Promise<void>;
     }
   }
