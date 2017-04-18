@@ -32,6 +32,6 @@ declare module './Ice' {
 
     export class ConnectionLostException extends SocketException {}
 
-
+    export class TimeoutException extends Ice.LocalException {}
   }
 }
