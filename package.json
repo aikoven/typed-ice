@@ -13,7 +13,8 @@
   "typings": "./ice.d.ts",
   "scripts": {
     "test": "tsc --noEmit -p tsconfig.json",
-    "lint": "tslint -c tslint.json -e node_modules/**/*.ts **/*.ts"
+    "lint": "tslint -c tslint.json -e node_modules/**/*.ts **/*.ts",
+    "prepublish": "npm run lint && npm run test"
   },
   "devDependencies": {
     "tslint": "^4.0.0",

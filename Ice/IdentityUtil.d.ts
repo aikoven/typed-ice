@@ -7,7 +7,9 @@ declare module './Ice' {
 
     export function proxyIdentityCompare(lhs: Ice.ObjectPrx | null,
                                          rhs: Ice.ObjectPrx | null): number;
-    export function proxyIdentityAndFacetCompare(lhs: Ice.ObjectPrx | null,
-                                                 rhs: Ice.ObjectPrx | null): number;
+    export function proxyIdentityAndFacetCompare(
+      lhs: Ice.ObjectPrx | null,
+      rhs: Ice.ObjectPrx | null,
+    ): number;
   }
 }
