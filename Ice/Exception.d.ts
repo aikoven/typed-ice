@@ -13,5 +13,13 @@ declare module './Ice' {
     export class LocalException extends Exception {}
     
     export class UserException extends Exception {}
+
+    export class RequestFailedException extends Exception {
+      id: Ice.Identity;
+      facet: string;
+      operation: string;
+    }
+
+    export class ObjectNotExistException extends RequestFailedException {}
   }
 }
