@@ -9,6 +9,7 @@ declare module './Ice' {
       constructor(high: number, low: number);
       
       toNumber(): number;
+      equals(rhs: any): boolean;
     }
   }
 }
