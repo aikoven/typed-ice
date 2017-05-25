@@ -29,6 +29,9 @@ declare module './Ice' {
       ice_getIdentity(): Ice.Identity;
       ice_context(context: Ice.Context): this;
       ice_getContext(): Ice.Context;
+
+      ice_batchOneway(): this;
+      ice_flushBatchRequests(): Ice.Promise<void>;
     }
     
     export const ObjectPrx: ObjectPrxStatic<ObjectPrx>;
