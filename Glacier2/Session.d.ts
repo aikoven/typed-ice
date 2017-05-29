@@ -16,7 +16,7 @@ declare module './Glacier2' {
     export const SessionPrx: Ice.ObjectPrxStatic<SessionPrx>;
 
     export interface SessionControlPrx extends Ice.ObjectPrx {
-
+      destroy(): Ice.Promise<void>;
     }
     export const SessionControlPrx: Ice.ObjectPrxStatic<SessionControlPrx>;
 
