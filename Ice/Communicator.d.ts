@@ -24,6 +24,7 @@ declare module './Ice' {
       ): Ice.Promise<Ice.ObjectAdapter>;
       getProperties(): Ice.Properties;
       getDefaultRouter(): Ice.RouterPrx;
+      setDefaultRouter(router: Ice.RouterPrx): void;
     }
   }
 }
