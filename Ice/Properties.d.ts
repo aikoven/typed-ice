@@ -13,6 +13,7 @@ declare module './Ice' {
       getPropertyAsIntWithDefault(key: string, value: number): number;
       getPropertyAsList(key: string): string[];
       getPropertyAsListWithDefault(key: string, value: string[]): string[];
+      getPropertiesForPrefix(prefix: string): Ice.PropertyDict;
       setProperty(key: string, value: string): void;
       parse(data: string): void;
       parseCommandLineOptions(prefix: string, options: string[]): string[];
