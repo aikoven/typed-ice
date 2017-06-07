@@ -20,6 +20,7 @@ import './LocalException';
 
 import './Promise';
 
+import './Locator';
 import './Router';
 
 // following should be imported form other modules
