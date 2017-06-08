@@ -25,6 +25,9 @@ declare module './Ice' {
       getProperties(): Ice.Properties;
       getDefaultRouter(): Ice.RouterPrx;
       setDefaultRouter(router: Ice.RouterPrx): void;
+
+      getDefaultLocator(): Ice.LocatorPrx | null;
+      setDefaultLocator(locator: Ice.LocatorPrx | null): void;
     }
   }
 }

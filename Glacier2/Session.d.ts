@@ -1,4 +1,7 @@
 import {Ice} from '../Ice/Ice';
+import {Glacier2} from "./Glacier2";
+
+export {Glacier2}
 
 declare module './Glacier2' {
   namespace Glacier2 {
