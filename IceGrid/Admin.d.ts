@@ -8,6 +8,7 @@ declare module "./IceGrid" {
   namespace IceGrid {
     export interface AdminPrx extends Ice.ObjectPrx {
       addObjectWithType(object: Ice.ObjectPrx, type: string): Ice.Promise<void>;
+      updateObject(object: Ice.ObjectPrx): Ice.Promise<void>;
     }
     export const AdminPrx: Ice.ObjectPrxStatic<AdminPrx>;
 
