@@ -21,6 +21,7 @@ declare module './Ice' {
       get(key: K): V | undefined;
       set(key: K, value: V): void;
       has(key: K): boolean;
+      delete(key: K): V | undefined;
       clone(): HashMap<K, V>;
       merge(from: HashMap<K, V>): void;
     }
