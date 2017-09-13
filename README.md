@@ -1,4 +1,4 @@
-# TypeScript definitions for [Zeroc ICE](https://github.com/zeroc-ice/ice) [![npm version][npm-image]][npm-url] 
+# TypeScript definitions for [Zeroc ICE](https://github.com/zeroc-ice/ice) [![npm version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] 
 
 Typings are incomplete. New definitions are added on demand.
 
@@ -18,3 +18,5 @@ Typings are incomplete. New definitions are added on demand.
 
 [npm-image]: https://badge.fury.io/js/typed-ice.svg
 [npm-url]: https://badge.fury.io/js/typed-ice
+[travis-image]: https://travis-ci.org/aikoven/typed-ice.svg?branch=master
+[travis-url]: https://travis-ci.org/aikoven/typed-ice

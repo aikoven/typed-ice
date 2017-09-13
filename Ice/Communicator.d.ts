@@ -1,4 +1,4 @@
-import {Ice} from './Ice';
+import './Ice';
 
 declare module './Ice' {
   namespace Ice {
@@ -16,10 +16,18 @@ declare module './Ice' {
       identityToString(identity: Ice.Identity): string;
 
       createObjectAdapter(name: string): Ice.Promise<Ice.ObjectAdapter>;
-      createObjectAdapterWithEndpoints(name: string, endpoints: string): Ice.Promise<Ice.ObjectAdapter>;
-      createObjectAdapterWithRouter(name: string, router: Ice.RouterPrx): Ice.Promise<Ice.ObjectAdapter>;
+      createObjectAdapterWithEndpoints(
+        name: string, endpoints: string,
+      ): Ice.Promise<Ice.ObjectAdapter>;
+      createObjectAdapterWithRouter(
+        name: string, router: Ice.RouterPrx,
+      ): Ice.Promise<Ice.ObjectAdapter>;
       getProperties(): Ice.Properties;
       getDefaultRouter(): Ice.RouterPrx;
+      setDefaultRouter(router: Ice.RouterPrx): void;
+
+      getDefaultLocator(): Ice.LocatorPrx | null;
+      setDefaultLocator(locator: Ice.LocatorPrx | null): void;
     }
   }
 }

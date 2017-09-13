@@ -1,4 +1,4 @@
-import {Ice} from './Ice';
+import './Ice';
 
 declare module './Ice' {
   namespace Ice {
@@ -9,6 +9,7 @@ declare module './Ice' {
       constructor(high: number, low: number);
       
       toNumber(): number;
+      equals(rhs: any): boolean;
     }
   }
 }

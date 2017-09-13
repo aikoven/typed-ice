@@ -1,4 +1,4 @@
-import {Ice} from './Ice';
+import './Ice';
 
 declare module './Ice' {
   namespace Ice {
@@ -32,6 +32,6 @@ declare module './Ice' {
 
     export class ConnectionLostException extends SocketException {}
 
-
+    export class TimeoutException extends Ice.LocalException {}
   }
 }

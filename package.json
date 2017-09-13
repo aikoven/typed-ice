@@ -1,6 +1,6 @@
 {
   "name": "typed-ice",
-  "version": "3.6.15",
+  "version": "3.6.31",
   "author": "Daniel Lytkin <dan.lytkin@gmail.com>",
   "description": "TypeScript definitions for ZeroC ICE",
   "keywords": [
@@ -12,9 +12,12 @@
   "repository": "aikoven/typed-ice",
   "typings": "./ice.d.ts",
   "scripts": {
-    "test": "tsc --noEmit -p tsconfig.json"
+    "test": "tsc --noEmit -p tsconfig.json",
+    "lint": "tslint -c tslint.json -e node_modules/**/*.ts **/*.ts",
+    "prepublish": "npm run lint && npm run test"
   },
   "devDependencies": {
+    "tslint": "^4.0.0",
     "typescript": "^2.1.4"
   }
 }

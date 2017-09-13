@@ -12,6 +12,7 @@ import './EndpointTypes';
 import './ObjectPrx';
 
 import './Properties';
+import './IdentityUtil';
 
 import './Identity';
 import './Exception';
@@ -19,6 +20,7 @@ import './LocalException';
 
 import './Promise';
 
+import './Locator';
 import './Router';
 
 // following should be imported form other modules
