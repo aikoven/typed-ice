@@ -20,7 +20,7 @@ declare module './Ice' {
       uncheckedCast(proxy: ObjectPrx | null | undefined,
                     facet?: string): T | null;
     }
-    
+
     export interface ObjectPrx {
       ice_ping(): Ice.Promise<void>;
       ice_getCachedConnection(): Ice.Connection;
@@ -29,12 +29,14 @@ declare module './Ice' {
       ice_getIdentity(): Ice.Identity;
       ice_context(context: Ice.Context): this;
       ice_getContext(): Ice.Context;
+      ice_invocationTimeout(ms: number): this;
+      ice_getInvocationTimeout(): number;
 
       ice_batchOneway(): this;
       ice_flushBatchRequests(): Ice.Promise<void>;
     }
-    
+
     export const ObjectPrx: ObjectPrxStatic<ObjectPrx>;
-    
+
   }
 }
