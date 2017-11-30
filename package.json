@@ -1,6 +1,6 @@
 {
   "name": "typed-ice",
-  "version": "3.6.33",
+  "version": "3.6.34",
   "author": "Daniel Lytkin <dan.lytkin@gmail.com>",
   "description": "TypeScript definitions for ZeroC ICE",
   "keywords": [
