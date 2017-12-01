@@ -34,6 +34,8 @@ declare module './Ice' {
 
       ice_batchOneway(): this;
       ice_flushBatchRequests(): Ice.Promise<void>;
+
+      ice_invocationTimeout(ms: number): this;
     }
 
     export const ObjectPrx: ObjectPrxStatic<ObjectPrx>;
