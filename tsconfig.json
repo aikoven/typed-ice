@@ -1,10 +1,18 @@
 {
   "compilerOptions": {
+    "lib": ["es2015"],
     "moduleResolution": "node",
     "strictNullChecks": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "baseUrl": ".",
+    "paths": {
+      "ice": ["src"]
+    }
   },
-  "exclude": [
-    "node_modules"
+  "files": [
+    "src/index.d.ts"
+  ],
+  "include": [
+    "test/**/*.ts"
   ]
 }

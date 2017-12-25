@@ -10,7 +10,7 @@
   ],
   "license": "GPL-2.0",
   "repository": "aikoven/typed-ice",
-  "typings": "./ice.d.ts",
+  "typings": "./src/index.d.ts",
   "scripts": {
     "test": "tsc --noEmit -p tsconfig.json",
     "lint": "tslint -c tslint.json -e node_modules/**/*.ts **/*.ts",
@@ -18,6 +18,6 @@
   },
   "devDependencies": {
     "tslint": "^4.0.0",
-    "typescript": "^2.1.4"
+    "typescript": "^2.6.1"
   }
 }
