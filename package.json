@@ -11,6 +11,9 @@
   "license": "GPL-2.0",
   "repository": "aikoven/typed-ice",
   "typings": "./src/index.d.ts",
+  "files": [
+    "src"
+  ],
   "scripts": {
     "test": "tsc --noEmit -p tsconfig.json",
     "lint": "tslint -c tslint.json -e \"node_modules/**/*.ts\" \"**/*.ts\"",
