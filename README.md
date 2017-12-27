@@ -1,6 +1,4 @@
-# TypeScript definitions for [Zeroc ICE](https://github.com/zeroc-ice/ice) [![npm version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] 
-
-Typings are incomplete. New definitions are added on demand.
+# TypeScript definitions for [Zeroc ICE](https://github.com/zeroc-ice/ice) [![npm version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 
 ## Usage
 

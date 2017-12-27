@@ -10,14 +10,18 @@
   ],
   "license": "GPL-2.0",
   "repository": "aikoven/typed-ice",
-  "typings": "./ice.d.ts",
+  "typings": "./src/index.d.ts",
   "scripts": {
     "test": "tsc --noEmit -p tsconfig.json",
-    "lint": "tslint -c tslint.json -e node_modules/**/*.ts **/*.ts",
-    "prepublish": "npm run lint && npm run test"
+    "lint": "tslint -c tslint.json -e \"node_modules/**/*.ts\" \"**/*.ts\"",
+    "generate": "slice2ts -e \"**/Communicator.ice\" -e \"**/Logger.ice\" -e \"**/Properties.ice\" -e \"**/Instrumentation.ice\" -e \"**/Plugin.ice\" -i \"Ice::Connection\" -i \"Ice::ObjectAdapter\" --root-dir node_modules/slice2js/ice/slice -o src --no-js --ice-imports \"node_modules/slice2js/ice/slice/{Ice,Glacier2,IceGrid,IceStorm,IceSSL}/*.ice\"",
+    "prepare": "npm run lint && npm run generate && npm run test"
   },
   "devDependencies": {
-    "tslint": "^4.0.0",
-    "typescript": "^2.1.4"
+    "slice2js": "~3.7.0",
+    "slice2ts": "^0.1.0",
+    "tslint": "^5.8.0",
+    "tslint-config-prettier": "^1.6.0",
+    "typescript": "^2.6.1"
   }
 }

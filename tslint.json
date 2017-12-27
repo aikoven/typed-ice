@@ -1,4 +1,7 @@
 {
+  "extends": [
+    "tslint-config-prettier"
+  ],
   "rules": {
     "class-name": true,
     "comment-format": [
@@ -9,18 +12,12 @@
       true,
       "spaces"
     ],
-    "max-line-length": [
-      true,
-      80
-    ],
     "no-duplicate-variable": true,
     "no-empty": false,
     "no-eval": true,
     "no-internal-module": true,
     "no-trailing-whitespace": false,
     "no-unused-expression": true,
-    "no-unused-variable": true,
-    "no-use-before-declare": true,
     "no-var-keyword": true,
     "one-line": [
       true,
