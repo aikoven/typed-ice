@@ -7,7 +7,7 @@ declare module './Ice.ns' {
       | number
       | string
       | boolean
-      | {hashCode(): number};
+      | {equals(other: any): boolean; hashCode(): number};
 
     class HashMap<K extends HashMapKey, V> {
       constructor();

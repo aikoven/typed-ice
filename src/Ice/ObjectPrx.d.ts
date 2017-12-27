@@ -12,6 +12,66 @@ declare module './Ice.ns' {
   namespace Ice {
     interface ObjectPrxConstructor<T extends ObjectPrx> {
       new (): T;
+
+      /**
+       * Returns the type ID of the most-derived type supported by the remote
+       * object.
+       */
+      ice_staticId(): string;
+
+      /**
+       * If the passed proxy is for an object of type T, or a proxy for an
+       * object with a type derived from T, the result of the cast is a non-null
+       * reference to a proxy of type TPrx; otherwise, if the passed proxy
+       * denotes an object of a different type (or if the passed proxy is null),
+       * the result of the cast is a null reference.
+       *
+       * Note that a checked cast contacts the server. This is necessary because
+       * only the implementation of an object in the server has definite
+       * knowledge of the type of an object. Consequently, a checked cast is
+       * implemented as the asynchronous method checkedCast, which may result in
+       * a ConnectTimeoutException or an ObjectNotExistException.
+       *
+       * @see https://doc.zeroc.com/display/Ice37/JavaScript+Mapping+for+Interfaces#JavaScriptMappingforInterfaces-Down-castingProxiesinJavaScript
+       */
+      checkedCast(
+        this: ObjectPrxConstructor<T>,
+        proxy: ObjectPrx | null | undefined,
+        facet?: string,
+        ctx?: Context,
+      ): AsyncResultBase<T | null>;
+
+      /**
+       * In contrast to checkedCast, an unchecked cast does not contact the
+       * server and unconditionally returns a proxy of the requested type.
+       * However, if you do use uncheckedCast, you must be certain that the
+       * proxy really does support the type you are casting to; otherwise, if
+       * you get it wrong, you will most likely get a run-time exception when
+       * you invoke an operation on the proxy. The most likely error for such a
+       * type mismatch is OperationNotExistException. However, other exceptions,
+       * such as a marshaling exception are possible as well. And, if the object
+       * happens to have an operation with the correct name, but different
+       * parameter types, no exception may be reported at all and you simply end
+       * up sending the invocation to an object of the wrong type; that object
+       * may do rather nonsensical things.
+       *
+       * @see @see https://doc.zeroc.com/display/Ice37/JavaScript+Mapping+for+Interfaces#JavaScriptMappingforInterfaces-Down-castingProxiesinJavaScript
+       */
+      uncheckedCast(
+        this: ObjectPrxConstructor<T>,
+        proxy: ObjectPrx,
+        facet?: string,
+      ): T;
+      uncheckedCast(
+        this: ObjectPrxConstructor<T>,
+        proxy: null | undefined,
+        facet?: string,
+      ): null;
+      uncheckedCast(
+        this: ObjectPrxConstructor<T>,
+        proxy: ObjectPrx | null | undefined,
+        facet?: string,
+      ): T | null;
     }
 
     class ObjectPrx {

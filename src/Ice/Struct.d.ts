@@ -5,6 +5,7 @@ declare module './Ice.ns' {
     interface Struct {
       clone(): this;
       equals(other: this): boolean;
+      hashCode(): number;
     }
   }
 }

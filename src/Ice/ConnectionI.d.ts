@@ -9,14 +9,6 @@ import './ObjectAdapterI';
 
 declare module './Ice.ns' {
   namespace Ice {
-    interface CloseCallback {
-      closed(connection: Connection): void;
-    }
-
-    interface HeartbeatCallback {
-      heartbeat(connection: Connection): void;
-    }
-
     interface Connection {
       /**
        * Explicitly closes the connection using the given closure mode.

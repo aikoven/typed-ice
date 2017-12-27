@@ -172,7 +172,7 @@ declare module './Ice.ns' {
        * with the communicator. Any errors that occur while flushing a
        * connection are ignored.
        */
-      flushBatchRequests(): AsyncResultBase | undefined;
+      flushBatchRequests(): AsyncResultBase<void> | undefined;
     }
   }
 }

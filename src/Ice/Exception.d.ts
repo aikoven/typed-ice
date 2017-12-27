@@ -2,11 +2,11 @@ export {Ice} from './Ice.ns';
 
 declare module './Ice.ns' {
   namespace Ice {
-    class ServantError extends Error {
+    class ServantError {
       cause: any;
     }
 
-    class Exception extends Error {
+    class Exception {
       constructor(cause?: any);
 
       ice_cause?: any;
