@@ -34,12 +34,11 @@ declare module './Ice.ns' {
        *
        * @see https://doc.zeroc.com/display/Ice37/JavaScript+Mapping+for+Interfaces#JavaScriptMappingforInterfaces-Down-castingProxiesinJavaScript
        */
-      checkedCast(
-        this: ObjectPrxConstructor<T>,
+      checkedCast<TPrx extends ObjectPrx>(
         proxy: ObjectPrx | null | undefined,
         facet?: string,
         ctx?: Context,
-      ): AsyncResultBase<T | null>;
+      ): AsyncResultBase<TPrx | null>;
 
       /**
        * In contrast to checkedCast, an unchecked cast does not contact the
@@ -57,21 +56,21 @@ declare module './Ice.ns' {
        *
        * @see @see https://doc.zeroc.com/display/Ice37/JavaScript+Mapping+for+Interfaces#JavaScriptMappingforInterfaces-Down-castingProxiesinJavaScript
        */
-      uncheckedCast(
-        this: ObjectPrxConstructor<T>,
+      uncheckedCast<TPrx extends ObjectPrx>(
+        this: ObjectPrxConstructor<TPrx>,
         proxy: ObjectPrx,
         facet?: string,
-      ): T;
-      uncheckedCast(
-        this: ObjectPrxConstructor<T>,
+      ): TPrx;
+      uncheckedCast<TPrx extends ObjectPrx>(
+        this: ObjectPrxConstructor<TPrx>,
         proxy: null | undefined,
         facet?: string,
       ): null;
-      uncheckedCast(
-        this: ObjectPrxConstructor<T>,
+      uncheckedCast<TPrx extends ObjectPrx>(
+        this: ObjectPrxConstructor<TPrx>,
         proxy: ObjectPrx | null | undefined,
         facet?: string,
-      ): T | null;
+      ): TPrx | null;
     }
 
     class ObjectPrx {
