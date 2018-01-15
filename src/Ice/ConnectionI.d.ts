@@ -40,13 +40,17 @@ declare module './Ice.ns' {
        * Associates a callback with this connection that is invoked whenever the
        * connection is closed. Passing a nil value clears the current callback.
        */
-      setCloseCallback(callback: CloseCallback | null): void;
+      setCloseCallback(
+        callback: ((connection: Connection) => void) | null,
+      ): void;
       /**
        * Associates a callback with this connection that is invoked whenever the
        * connection receives a heartbeat message. Passing a nil value clears the
        * current callback.
        */
-      setHeartbeatCallback(callback: HeartbeatCallback | null): void;
+      setHeartbeatCallback(
+        callback: ((connection: Connection) => void) | null,
+      ): void;
       /**
        * Configures Active Connection Management settings for this connection.
        *
