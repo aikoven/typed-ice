@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "slice2js": "~3.7.0",
-    "slice2ts": "^0.1.0",
+    "slice2ts": "^0.1.8",
     "tslint": "^5.8.0",
     "tslint-config-prettier": "^1.6.0",
     "typescript": "^2.6.1"
