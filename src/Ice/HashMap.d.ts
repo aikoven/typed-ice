@@ -10,6 +10,11 @@ declare module './Ice.ns' {
       | {equals(other: any): boolean; hashCode(): number};
 
     class HashMap<K extends HashMapKey, V> {
+      static compareEquals<V extends {equals(other: any): boolean}>(
+        v1: V,
+        v2: V,
+      ): boolean;
+      static compareIdentity<V>(v1: V, v2: V): boolean;
       constructor();
       constructor(from: HashMap<K, V>);
       constructor(
