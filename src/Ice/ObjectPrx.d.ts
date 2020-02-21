@@ -336,6 +336,18 @@ declare module './Ice.ns' {
        * @see https://doc.zeroc.com/display/Ice37/Filtering+Proxy+Endpoints
        */
       ice_preferSecure(b: boolean): this;
+      /**
+       * Enables or disables connection caching for the proxy.
+       *
+       * @see https://doc.zeroc.com/ice/3.7/client-server-features/connection-management/connection-establishment#id-.ConnectionEstablishmentv3.7-cache
+       */
+      ice_connectionCached(b: boolean): this;
+      /**
+       * Returns true if the proxy uses connection caching, otherwise false.
+       *
+       * @see https://doc.zeroc.com/ice/3.7/client-server-features/connection-management/connection-establishment#id-.ConnectionEstablishmentv3.7-cache
+       */
+      ice_isConnectionCached(): boolean;
 
       /**
        * Returns the router that is configured for the proxy (null if no router
