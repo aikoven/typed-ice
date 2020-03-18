@@ -8,7 +8,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "ice": ["node_modules/typed-ice"]
+      "ice": ["../../node_modules/typed-ice"],
+      "ice/*": ["../../node_modules/typed-ice/*"]
     }
   }
 }
