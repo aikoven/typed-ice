@@ -31,6 +31,7 @@ import './Current';
 import './Endpoint';
 import './EndpointF';
 import './EndpointTypes';
+import './FormatType';
 import './Identity';
 import './LocalException';
 import './Locator';
