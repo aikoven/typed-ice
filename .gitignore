@@ -37,3 +37,4 @@ src/IceGrid/*
 
 src/IceStorm/*
 src/IceSSL/*
+!src/IceSSL/IceSSL.d.ts
